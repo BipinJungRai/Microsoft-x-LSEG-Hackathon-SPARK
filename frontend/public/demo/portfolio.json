@@ -1,0 +1,106 @@
+{
+  "portfolio": {
+    "sim_date": "2022-01-03",
+    "safe_bucket_usd": 30000,
+    "growth_bucket_usd": 70000,
+    "overlap_score": 0.31,
+    "positions": [
+      {
+        "ticker": "SHY",
+        "amount_usd": 30000,
+        "bucket": "safe",
+        "reason_facts": [
+          {
+            "id": "goal_years",
+            "value": 5,
+            "unit": "y",
+            "source": "profile",
+            "as_of": "2022-01-03"
+          }
+        ],
+        "reason": "Treasuries cover your $30,000 house deposit due in 5 years"
+      },
+      {
+        "ticker": "VTI",
+        "amount_usd": 22000,
+        "bucket": "growth",
+        "reason_facts": [
+          {
+            "id": "tech_overlap",
+            "value": 31,
+            "unit": "%",
+            "source": "yfinance",
+            "as_of": "2022-01-03"
+          }
+        ],
+        "reason": "Broad US fund, kept smaller because 31% of it is tech, which your job already depends on"
+      },
+      {
+        "ticker": "VXUS",
+        "amount_usd": 18000,
+        "bucket": "growth",
+        "reason_facts": [
+          {
+            "id": "intl_weight",
+            "value": 25,
+            "unit": "%",
+            "source": "yfinance",
+            "as_of": "2022-01-03"
+          }
+        ],
+        "reason": "International stocks spread risk away from the US market"
+      },
+      {
+        "ticker": "XLV",
+        "amount_usd": 15000,
+        "bucket": "growth",
+        "reason_facts": [
+          {
+            "id": "job_overlap",
+            "value": 0,
+            "unit": "%",
+            "source": "yfinance",
+            "as_of": "2022-01-03"
+          }
+        ],
+        "reason": "Healthcare has no overlap with your tech job"
+      },
+      {
+        "ticker": "BND",
+        "amount_usd": 15000,
+        "bucket": "growth",
+        "reason_facts": [
+          {
+            "id": "bond_share",
+            "value": 20,
+            "unit": "%",
+            "source": "profile",
+            "as_of": "2022-01-03"
+          }
+        ],
+        "reason": "Bonds cushion the growth bucket against a downturn"
+      }
+    ],
+    "baseline_overlap_score": 0.52,
+    "flags": [
+      "All holdings are USD-denominated ETFs; as a UK-based client you carry GBP/USD currency risk on top of market risk."
+    ]
+  },
+  "explanation": "Your $30,000 house deposit sits in short-term Treasuries (SHY) because you need it in 5 years. The rest avoids tech: 31% of a broad US fund is tech, so we hold less of it.",
+  "facts": [
+    {
+      "id": "goal_years",
+      "value": 5,
+      "unit": "y",
+      "source": "profile",
+      "as_of": "2022-01-03"
+    },
+    {
+      "id": "tech_overlap",
+      "value": 31,
+      "unit": "%",
+      "source": "yfinance",
+      "as_of": "2022-01-03"
+    }
+  ]
+}

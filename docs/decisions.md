@@ -1,0 +1,20 @@
+# Decision log (append; newest last). Format: date · decision · why · who
+- 2026-10-23 · Azure (Cosmos DB + AI Foundry/OpenAI) instead of Supabase · Microsoft hackathon, Round 1 judge from Microsoft; JSON docs fit Profile/Portfolio/Fact + audit log · team
+- 2026-10-23 · DB layer falls back to local JSONL when COSMOS_* unset · demo must survive bad Wi-Fi / unprovisioned DB · scaffold
+- 2026-10-23 · Git-committed docs are the shared Claude context (no external tool) · zero setup for every teammate · team
+- 2026-10-23 · Contract additions (optional): Position.reason, Portfolio.baseline_overlap_score; LLM endpoints fail fast with {"error","fallback":true} 504/502 (parse keeps 422); /api/ask accepts profile=null · frontend owner request; mocks updated same commit · B
+- 2026-10-23 · LLM client is provider-flexible (LLM_BASE_URL/LLM_API_KEY/LLM_MODEL, AZURE_OPENAI_* fallback). Organizer portal is a Blazor login page, API shape unknown; no extra Azure resources unless free and subscription exists (docs/context/AZURE.md) · B
+- 2026-10-23 · Frontend work lives on branch `bipin-frontend` (not `p1/frontend`) · branch already created; one name for the whole day · P1
+- 2026-10-23 · Frontend validates every response with zod and degrades per section (core fields strict, enhancement fields optional) · teammates' backends will drift during the day; demo must not white-screen · P1
+- 2026-10-23 · Frontend is one orbit at `/` (`?view=profile|portfolio|replay|ask`); old `/portfolio` and `/replay` routes redirect · judges see one continuous flow, deep links work for the pitch · P1
+- 2026-10-23 · Demo fallback (`NEXT_PUBLIC_DEMO_FALLBACK=1`) also covers HTML 5xx / non-JSON replies, not just network errors, and the badge says "Offline demo data" whenever it is in use · a half-built backend (NotImplementedError 500s) must not break the demo, and the UI must not call saved data "live" · P1
+- 2026-10-23 · Compare uses a separate sessionStorage cache ("demo-prep") that Reset demo keeps · Compare stays instant after a reset and a refresh doesn't redo LLM calls · P1
+- 2026-10-23 · Cut: Autopilot, `?` shortcuts panel, P persona cycle, "Clear all caches" button · behind schedule; core story first · P1
+- 2026-10-23 · Product renamed SPARK (Smart Portfolio Advisor for Retail Knowledge); name lives in `frontend/lib/brand.ts` and the page title · team rename · P1
+- 2026-10-23 · Removed the guided tour and swipe-to-change-view; phones use a bottom tab bar and render one full-height panel (no 3D, no backdrop blur) · tour bar + header + dock + footer left ~60px of a 664px phone screen, and stacked blur/3D panels made phones lag · P1
+- 2026-10-23 · Added a "Write your own" persona (empty text box); a nameless profile is sent as "You" so the time machine can find it (backend registry is keyed by first name and ignores empty names) · P1
+- 2026-10-23 · Every view says whose plan it shows ("Viewing: Priya's plan · demo persona" / "Your own profile") and Compare labels the three others as fictional examples; the data-sources sheet explains whose data is whose · users mistook demo personas for themselves · P1
+- 2026-10-23 · Removed the "Not financial advice / paper money" footer and the matching Proof caveat · user decision: hackathon demo, no real money; the AI system prompt still tells the model it gives no advice · P1
+- 2026-10-23 · Demo personas are senior (VP of Engineering, NHS hospital consultant, operations director), each with $100,000 to invest, and their texts now include their names so the parser returns one · a nurse with $100k was not credible, and nameless parses produced "’s $100,000 plan" · P1
+- 2026-10-23 · Data-availability questions in Ask ("do you have recent data?") are answered by code, not the LLM · the LLM, told to use only facts, kept saying it had no access even after Go live · P1/B
+- 2026-10-23 · Origin labels (From you / Real market data / Code rules / AI wording / Example, not you) on cards, and a /how-it-works page with 3 architecture levels, data flow and a truthful Microsoft/Azure table · users could not tell their own data from examples; needed for the pitch · P1
