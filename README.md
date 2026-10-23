@@ -28,6 +28,20 @@ $100k to invest, $15k already in tech-heavy QQQ, and a $30k house deposit due in
 
 Same $100k, different clients: **Tom** (41, NHS nurse) has a stable income, so he can take more equity risk. **Fiona** (35, offshore oil engineer) gets less energy exposure and a flag on her employer-share concentration.
 
+## Screenshots
+The demo path as shown at the hackathon (the app was still called "Don't Double Down" at that point; it was renamed SPARK later the same day). Sample data, 1920×1080.
+
+| | |
+|---|---|
+| ![Profile: tell us about your life](docs/screenshots/01-profile.png) | ![Review: what the AI understood, with the contradiction flagged](docs/screenshots/02-review.png) |
+| **1. Profile.** The client describes their life in plain words. | **2. Review.** What the AI understood, editable, with the risk contradiction flagged. |
+| ![Portfolio: the $100,000 plan](docs/screenshots/03-portfolio.png) | ![Facts drawer: how this was decided](docs/screenshots/04-facts-drawer.png) |
+| **3. Portfolio.** Overlap with the job's sector, safe and growth buckets, every holding. | **4. How this was decided.** Every fact behind the plan, with its source and date. |
+| ![Compare: three clients, three plans](docs/screenshots/05-compare.png) | ![Time machine at 3 January 2022](docs/screenshots/06-replay-start.png) |
+| **5. Compare.** Same $100k, three different lives. | **6. Time machine.** The replay starts on 3 January 2022; the future is hidden. |
+| ![Time machine: the coach steps in during the 2022 drop](docs/screenshots/07-replay-coach.png) | ![Ask: the leak test](docs/screenshots/08-ask-leak-test.png) |
+| **7. Coach.** In the mid-2022 drop the coach explains the cost of selling instead of panicking. | **8. Leak test.** Asked what tech does in 2022, it won't predict the future. |
+
 ## Code decides, the LLM only explains
 ```mermaid
 flowchart LR
